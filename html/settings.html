@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/setting.css">
+    <link rel="icon" href="../Logos/icons8-microsoft-to-do-app-48.png">
+    <title>DoIt</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+               <div class="editProfile">
+                    <div class="top">
+                        <h1>Edit Profile</h1>
+                        <div class="image" >
+                            <img src="../Images/user.png" id="image">
+                        </div>
+                    </div>
+                    <div class="data">
+                        <input type="text" id="fname" placeholder="First Name" readonly >
+                        <input type="text" id="lname" placeholder="Last Name" readonly >
+                        <input type="text" id="email" placeholder="Email" readonly>
+                        <input type="password" id="password" placeholder="Current Password">
+                        <input type="password" id="newPassword" placeholder="New Password">
+                        <p></p>
+                        <button id="save" onclick="save()">Save</button>
+                    </div>
+               </div>
+               <button id="btn" onclick="window.location.href='products.html'"></button>
+        </div>
+    </section>
+    <script src="../script/settings.js"></script>
+</body>
+</html>

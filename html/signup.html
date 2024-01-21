@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="icon" href="../Logos/store logo.png">
+    <title>Shoppy</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../main.html'">
+                <img src="../Logos/store logo.png" >
+                <p>Shoppy</p>
+            </div> 
+            <ul>
+                <li>
+                    <a href="contactUS.html">Contact Us</a>
+                </li>
+                <li>
+                    <a onclick="window.location.href='../main.html'">About</a>
+                </li>
+                <li>
+                    <a href="login.html">LogIn</a>
+                </li>
+                <li>
+                    <button class="signUpButton" onclick="window.location.href='signup.html'"><b>Sign Up</b></button>
+                </li>
+            </ul>
+            <div id="menu" onclick="menu()">
+                <img src="../Logos/menu.png">
+            </div>
+        </nav>
+    </header>
+    <div class="menu hide">
+        <ul>
+            <li>
+                <a href="../main.html">Home</a>
+            </li>
+            <li>
+                <a href="contactUS.html">Contact Us</a>
+            </li>
+            <li>
+                <a onclick="menu(); window.location.href='../main.html'">About</a>
+            </li>
+            <li>
+                <a href="login.html">LogIn</a>
+            </li>
+            <li>
+                <a href="signup.html">Signup</a>
+            </li>
+        </ul>
+    </div>
+    <section id="mySection">
+        <div class="formContainer">
+            <h2>Signup</h2>    
+            <input type="text" id="signupFname" placeholder="First Name" required>
+            <input type="text" id="signupLname" placeholder="Last Name" required>
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <p></p>
+            <input type="text" id="signupUserName" placeholder="Username" required>
+            <p></p>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <p ></p>
+            <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+            <p ></p>
+            <button id="signupButton">Signup</button>
+        </div>
+    </section>
+    <script src="../script/signup.js"></script>
+</body>
+</html>

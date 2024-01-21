@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="icon" href="../Logos/store logo.png">
+    <title>Shoppy</title>
+</head>
+<body>
+    <header>
+         <nav>
+            <div class="logo" onclick="window.location.href='../main.html'">
+                    <img src="../Logos/store logo.png" >
+                    <p>Shoppy</p>
+            </div> 
+            <ul>
+                <li>
+                    <a href="html/contactUS.html">Contact Us</a>
+                </li>
+                <li>
+                    <a onclick="about()">About</a>
+                </li>
+                <li>
+                    <a href="html/login.html">LogIn</a>
+                </li>
+                <li>
+                    <button class="signUpButton" onclick="window.location.href='html/signup.html'"><b>Sign Up</b></button>
+                </li>
+            </ul>
+            <div id="menu" onclick="menu()">
+                <img src="../Logos/menu.png">
+            </div>
+        </nav>
+    </header>
+    <section id="mySection">
+       <div class="products">
+            <!-- <div class="product">
+                <img src="">
+                <p>Non-Alcoholic Concentrated Perfume Oil</p>
+                <p><b>122$</b></p>
+                <p><del>130$</del></p>
+                <p>rating:3.5</p>
+            </div> -->
+       </div>
+    </section>
+    <div class="menu hide">
+        <ul>
+            <li>
+                <a href="main.html">Home</a>
+            </li>
+            <li>
+                <a href="html/contactUS.html">Contact Us</a>
+            </li>
+            <li>
+                <a onclick="menu(); about()">About</a>
+            </li>
+            <li>
+                <a href="html/login.html">LogIn</a>
+            </li>
+            <li>
+                <a href="html/signup.html">Signup</a>
+            </li>
+        </ul>
+    </div> 
+    <footer id="myFooter">
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.503234709128!2d30.878797183225256!3d29.936200459191685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458ff685d274299%3A0x473b69afaee3c5b7!2sAhram%20Canadian%20University!5e0!3m2!1sen!2seg!4v1705758239461!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="data">
+            <div class="footer-logo">
+                <img src="../Logos/store logo.png" >
+                <p>Shoppy</p>
+            </div>
+            <div class="footer-info">
+                <h1>Contact Us:</h1>
+                <p>Email: info@Shoppy.com</p>
+                <p>Phone: +1 123-456-7890</p>
+            </div>
+            <div class="social-media">
+                <div class="socialBox">
+                    <img src="../Logos/facebook.png">
+                </div>
+                <div class="socialBox">
+                    <img src="../Logos/instagram.png">
+                </div>
+                <div class="socialBox">
+                    <img src="../Logos/twitter.png">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Shoppy. All rights reserved.</p>
+        </div>
+    </footer> 
+    <button id="btn" class="hide" ><img src="../Logos/right.png" alt=""></button>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/products.js"></script>
+</body>
+</html>

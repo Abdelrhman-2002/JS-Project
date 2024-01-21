@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="Logos/store logo.png">
+    <title>Shoppy</title>
+</head>
+<body>
+    <header>
+         <nav>
+            <div class="logo" onclick="window.location.href='./main.html'">
+                    <img src="Logos/store logo.png" >
+                    <p>Shoppy</p>
+            </div> 
+            <ul>
+                <li>
+                    <a href="html/contactUS.html">Contact Us</a>
+                </li>
+                <li>
+                    <a onclick="about()">About</a>
+                </li>
+                <li>
+                    <a href="html/login.html">LogIn</a>
+                </li>
+                <li>
+                    <button class="signUpButton" onclick="window.location.href='html/signup.html'"><b>Sign Up</b></button>
+                </li>
+            </ul>
+            <div id="menu" onclick="menu()">
+                <img src="Logos/menu.png">
+            </div>
+        </nav>
+    </header>
+    <section id="mySection">
+        <div class="ads">
+            <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            
+                <div class="carousel-inner">
+                  <div class="carousel-item active c-item" >
+                    <img src="Images/img1.jpeg" class="d-block w-100 c-img" alt="Slide 1">
+                  </div>
+                  <div class="carousel-item c-item">
+                    <img src="Images/img3.png" class="d-block w-100 c-img" alt="Slide 2">
+                    </div>
+                  </div>
+                  <div class="carousel-item c-item">
+                    <img src="Images/img2.jpeg" class="d-block w-100 c-img" alt="Slide 3">
+                    </div>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+       </div>
+       <div class="prev"> 
+            <img class="cartImage" src="Logos/shopping-cart.png" >
+            <div class="box">
+                <h1>Shoppy</h1>
+                <p>Elevate your shopping joy, enjoy our diverse selection!</p>
+                <button class="discover" onclick="discover()"><b>Discover</b></button>
+            </div>
+       </div>
+       <div class="products">
+            <h1>Our Products</h1>
+
+
+            <div class="product">
+                <div class="back">
+                    <img src="Images/laptops.png">
+                </div>
+                <div class="text">
+                    <p>Laptops</p>
+                    <button class="shopNow" onclick="window.location.href='html/signup.html'">Shop Now</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="text">
+                    <p>SmartPhones</p>
+                    <button class="shopNow" onclick="window.location.href='html/signup.html'">Shop Now</button>
+                </div>
+                <div class="back">
+                    <img src="Images/phones.png">
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="back">
+                    <img src="Images/fragrances.png">
+                </div>
+                <div class="text">
+                    <p>Fragrances</p>
+                    <button class="shopNow" onclick="window.location.href='html/signup.html'">Shop Now</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="text">
+                    <p>SkinCare</p>
+                    <button class="shopNow" onclick="window.location.href='html/signup.html'">Shop Now</button>
+                </div>
+                <div class="back">
+                     <img src="Images/skincare.png">
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="back">
+                    <img src="Images/home-decoration.png">
+                </div>
+                <div class="text">
+                    <p>Home Decoration</p>
+                    <button class="shopNow" onclick="window.location.href='html/signup.html'">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="text">
+                    <p>Groceries</p>
+                    <button class="shopNow" onclick="window.location.href='html/signup.html'">Shop Now</button>
+                </div>
+                <div class="back">
+                    <img src="Images/groceries.png">
+                </div>
+            </div>
+       </div>
+    </section>
+    <div class="menu hide">
+        <ul>
+            <li>
+                <a href="main.html">Home</a>
+            </li>
+            <li>
+                <a href="html/contactUS.html">Contact Us</a>
+            </li>
+            <li>
+                <a onclick="menu(); about()">About</a>
+            </li>
+            <li>
+                <a href="html/login.html">LogIn</a>
+            </li>
+            <li>
+                <a href="html/signup.html">Signup</a>
+            </li>
+        </ul>
+    </div> 
+    <footer id="myFooter">
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.503234709128!2d30.878797183225256!3d29.936200459191685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458ff685d274299%3A0x473b69afaee3c5b7!2sAhram%20Canadian%20University!5e0!3m2!1sen!2seg!4v1705758239461!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="data">
+            <div class="footer-logo">
+                <img src="Logos/store logo.png" >
+                <p>Shoppy</p>
+            </div>
+            <div class="footer-info">
+                <h1>Contact Us:</h1>
+                <p>Email: info@Shoppy.com</p>
+                <p>Phone: +1 123-456-7890</p>
+            </div>
+            <div class="social-media">
+                <div class="socialBox">
+                    <img src="Logos/facebook.png">
+                </div>
+                <div class="socialBox">
+                    <img src="Logos/instagram.png">
+                </div>
+                <div class="socialBox">
+                    <img src="Logos/twitter.png">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Shoppy. All rights reserved.</p>
+        </div>
+    </footer> 
+    <button id="" class="hide" ><img src="Logos/right.png" alt=""></button>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>
