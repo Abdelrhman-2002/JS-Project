@@ -395,7 +395,7 @@ footer{
 }
 .product{
     width: 300px;
-    height: 450px;
+    /* height: 450px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -407,6 +407,7 @@ footer{
     overflow: hidden;
     box-shadow: 2px 2px 2px gray;
     border-radius: 15px;
+    position: relative;
 }
 .product:hover{
     cursor: pointer;

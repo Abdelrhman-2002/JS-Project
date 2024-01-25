@@ -54,19 +54,19 @@ xhr.addEventListener("readystatechange", function () {
             `;
         }
 
-
         productsContainer.innerHTML = str;
-
         let productElements = document.getElementsByClassName("product");
         for (let i = 0; i < productElements.length; i++) {
             productElements[i].addEventListener("click", function (event) {
                 let clickedProductTitle = event.currentTarget.querySelector(".product-title").innerText;
                 window.localStorage.setItem("product-title",JSON.stringify(clickedProductTitle));
                 window.location.href="../html/product.html"
-            });
+            }); 
         }
     }
 });
+
+
 function categorize(category){
     if (xhr.readyState === 4) {
         let products = JSON.parse(xhr.response);
@@ -99,6 +99,7 @@ function categorize(category){
         }
     }
 }
+
 
 
 
