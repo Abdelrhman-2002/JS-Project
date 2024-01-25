@@ -78,3 +78,28 @@ window.addEventListener("scroll",function(){
         document.getElementById("mainSliderImage").src = newSrc;
     }
     
+    if (localStorage.getItem("theme")){
+        let theme = JSON.parse(window.localStorage.getItem("theme"));
+        let body = document.body;
+        let themeIconImage = document.getElementById('themeIconImage');
+        if (theme=="light") {
+            document.body.setAttribute("theme", "light");
+            themeIconImage.src = '../Logos/night-mode.png';
+        } else {
+            document.body.setAttribute("theme", "dark");
+            themeIconImage.src = '../Logos/brightness.png';
+        }
+    }
+    
+    function toggleDarkMode() {
+        let themeIconImage = document.getElementById('themeIconImage');
+        if (document.body.getAttribute("theme") === "dark") {
+            document.body.setAttribute("theme", "light");
+            themeIconImage.src = '../Logos/night-mode.png';
+            window.localStorage.setItem("theme", JSON.stringify("light"));
+        } else {
+            document.body.setAttribute("theme", "dark");
+            themeIconImage.src = '../Logos/brightness.png';
+            window.localStorage.setItem("theme", JSON.stringify("dark"));
+        }
+    }

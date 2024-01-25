@@ -8,9 +8,18 @@
 :root,[theme='light']{
   --dv--color:#ff5722;
   --text--color:#e4f1fe;
+  --txt--color:black;
   --primary--color:#33332f;
   --dr--color:black;
   --nv--color:rgb(228, 241, 254,0.5);
+}
+:root,[theme='dark']{
+  --dv--color:#ff5722;
+  --text--color:black;
+  --txt--color:white;
+  --primary--color:#33332f;
+  --dr--color:black;
+  --nv--color:rgba(0, 0, 0, 0.5);
 }
 section{
   display: flex;
@@ -44,6 +53,7 @@ section{
   height: 600px;
   background-color: var(--nv--color);
   border-radius: 10px;
+  color: var(--txt--color);
 }
 .top{
   height: 200px;
@@ -102,12 +112,18 @@ section{
   border: none;
   cursor: pointer;
   border-radius: 50%;
-  background-color: var(--primary--color);
   color: var(--text--color);
+  background-color: var(--dv--color);
   position: absolute;
   bottom: 20px;
   right: 20px;
   font-size: 20px;
+  transition: 1s;
+}
+#save:hover{
+  background-color: var(--dr--color);
+  color: var(--dv--color);
+  transform: scale(1.2);
 }
 #btn{
   background-image: url(../Logos/undo.png);
@@ -126,3 +142,15 @@ section{
   cursor: pointer;
 }
 
+.themeIcon {
+  height: 70px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10000000;
+}
+#themeIconImage {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}

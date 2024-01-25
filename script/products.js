@@ -99,6 +99,10 @@ function categorize(category){
         }
     }
 }
+function logout(){
+    window.location.href='../main.html';
+    window.localStorage.setItem("currentUser",null)
+}
 
 
 
@@ -112,44 +116,30 @@ function categorize(category){
 
 
 
-
-//get the theme that is saved in the memory
 if (localStorage.getItem("theme")){
     let theme = JSON.parse(window.localStorage.getItem("theme"));
     let body = document.body;
     let themeIconImage = document.getElementById('themeIconImage');
-    if (theme=="light-mode") {
-        body.classList.remove('dark-mode');
+    if (theme=="light") {
+        document.body.setAttribute("theme", "light");
         themeIconImage.src = '../Logos/night-mode.png';
-        body.style.backgroundColor = '#fff'; // Light mode background color
-        window.localStorage.setItem("theme",JSON.stringify("light-mode"));//save the theme as light mode in the browser
     } else {
-        body.classList.add('dark-mode');
+        document.body.setAttribute("theme", "dark");
         themeIconImage.src = '../Logos/brightness.png';
-        body.style.backgroundColor = '#1a1a1a'; // Dark mode background color
-        window.localStorage.setItem("theme",JSON.stringify("dark-mode"));//save the theme as night mode in the browser
     }
 }
-
 
 function toggleDarkMode() {
-    let body = document.body;
     let themeIconImage = document.getElementById('themeIconImage');
-    if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
+    if (document.body.getAttribute("theme") === "dark") {
+        document.body.setAttribute("theme", "light");
         themeIconImage.src = '../Logos/night-mode.png';
-        body.style.backgroundColor = '#fff'; // Light mode background color
-        window.localStorage.setItem("theme",JSON.stringify("light-mode"));//save the theme as light mode in the browser
+        window.localStorage.setItem("theme", JSON.stringify("light"));
     } else {
-        body.classList.add('dark-mode');
+        document.body.setAttribute("theme", "dark");
         themeIconImage.src = '../Logos/brightness.png';
-        body.style.backgroundColor = '#1a1a1a'; // Dark mode background color
-        window.localStorage.setItem("theme",JSON.stringify("dark-mode"));//save the theme as night mode in the browser
+        window.localStorage.setItem("theme", JSON.stringify("dark"));
     }
 }
-let logo = document.getElementById('logo');
 
-if (logo) {
-    logo.addEventListener('click', toggleDarkMode);
-}
 

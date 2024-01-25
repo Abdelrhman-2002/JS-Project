@@ -9,9 +9,18 @@
 :root,[theme='light']{
     --dv--color:#ff5722;
     --text--color:#e4f1fe;
+    --txt--color:black;
     --primary--color:#33332f;
     --dr--color:black;
     --nv--color:rgb(228, 241, 254,0.5);
+}
+:root,[theme='dark']{
+    --dv--color:#ff5722;
+    --text--color:black;
+    --txt--color:white;
+    --primary--color:#33332f;
+    --dr--color:black;
+    --nv--color:rgba(0, 0, 0, 0.5);
 }
 nav {
     height: 65px;
@@ -27,7 +36,7 @@ nav {
     border-radius: 20px;
     z-index: 1000;
     transition: 1s;
-    behavior:"smooth"
+    color: var(--txt--color);
 }
 header{
     display: flex;
@@ -39,40 +48,35 @@ header{
     align-items: center;
     gap: 3px;
     transform: translateX(30px);
+    color: var(--txt--color);
 }
 .logo:hover{
     cursor: pointer;
 }
-.signUpButton {
-    width: 100px;
-    font-size: 20px;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    line-height: 35px;
-    transition: 1s;
-    font-family: 'Permanent Marker', cursive;
-    color: var(--text--color);
-    background-color: var(--dv--color);
+.prof{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
-.signUpButton:hover{
-    background-color: var(--dr--color);
-    color: var(--dv--color);
-    transform: scale(1.1);
+
+.logOut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .logo p{
-    transform: translateY(8px);
     font-size: 30px;
-    color: var(--dr--color);
+    color: var(--txt--color);
     font-weight: 900;
 }
 nav ul{
-    transform: translateY(8px);
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--dr--color);
+    color: var(--txt--color);
     font-weight: 900;
     font-size: 25px;
     font-family: 'Libre Baskerville', serif;
@@ -80,11 +84,6 @@ nav ul{
 nav img{
     height: 50px;
     width: 50px;
-}
-nav a{
-    text-decoration: none;
-    color: var(--dr--color);
-    transition: 1s;
 }
 nav a:hover{
     cursor: pointer;
@@ -96,6 +95,7 @@ nav ul li{
 }
 nav ul li:hover{
     color: var(--dv--color);
+    cursor: pointer;
 }
 section{
     width: 100%;
@@ -106,11 +106,6 @@ section{
     align-items: center;
     justify-content: center;
 }
-
-
-
-
-
 #map{
     margin-top: 100px;
     width: 80%;
@@ -119,12 +114,13 @@ section{
     margin-bottom: 50px;
 }
 footer{
-    height: 800px;
+    min-height: 800px;
     background-color: var(--dr--color);
     color: var(--text--color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
 }
@@ -134,7 +130,8 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
+    flex-wrap: wrap;
+    color: white;
 }
 .social-media{
     display: flex;
@@ -191,48 +188,8 @@ footer{
 .socialBox:hover{
     cursor: pointer;
 }
-#menu{
-    height: 100%;
-    width: 100px;
-    display: none;
-}
-#menu:hover{
-    cursor: pointer;
-}
-.menu{
-    width: 100%;
-    height: 100vh;
-    z-index: 999;
-    background-color: var(--primary--color);
-    color: var(--text--color);
-    font-size: 30px;
-}
 .hide{
     display: none;
-}
-.menu ul{
-    width: 100%;
-    height: 80%;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-}
-.menu ul li{
-   width: 200px;
-   text-align: center;
-   border-radius: 10px;
-}
-.menu ul li:hover{
-    cursor: pointer;
-    background-color: var(--nv--color);
-}
-.menu ul a{
-    text-decoration: none;
-    color: var(--text--color);
-
 }
 .show:hover{
     cursor: pointer;
@@ -248,61 +205,38 @@ footer{
     bottom: 10px;
     right: 10px;
 }
-@media only screen and (max-width: 850px) {
-    nav ul{
-        display: none;
-    }
-    nav{
-        padding: 10px;
-    }
-    #menu{
-        display: block;
-    }
-    .prev img{
-        display: none;
-    }
-    .prev{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-}
-@media only screen and (max-width: 600px) {
-    #menu{
-        width: 50px;
-        height: 50px;
-    }
-    .data{
-        flex-wrap: wrap;
-    }
-}
 .products{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .product{
     width: 60%;
     height: 60%;
     background-color: var(--nv--color);
-    color: var(--dr--color);
+    color: var(--txt--color);
     display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
+    flex-wrap: wrap;
 }
 .slider{
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    
 }
 .slider img{
     width: 100%;
     height: 70%;
     border-radius: 20px;
-
+    margin-top: 10px;
 }
 .slides{
     display: flex;
@@ -321,6 +255,9 @@ footer{
     cursor: pointer;
     outline: 1px solid var(--dr--color);
 }
+.footer-bottom{
+    color: white;
+}
 .productData{
     width: 80%;
     height: 100%;
@@ -330,7 +267,9 @@ footer{
     gap: 30px;
     padding-left: 20px;
     position: relative;
+    flex-wrap: wrap;
     margin-top: 10px;
+    color: var(--txt--color);
 }
 #addtocart{
     width: 150px;
@@ -371,4 +310,27 @@ footer{
 .product p:nth-child(6){
     font-size: 20px;
     font-weight: 500;
+}
+@media only screen and (max-width: 800px) {
+    #addtocart{
+       position: static;
+       margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .prof p{
+        display: none;
+    }
+}
+.themeIcon {
+    height: 70px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10000000;
+}
+#themeIconImage {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
 }
