@@ -398,16 +398,32 @@ footer{
     height: 450px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    background-color: var(--text--color);
+    background-color: var(--nv--color);
     color: var(--dr--color);
+    /* background-color: var(--dr--color);
+    color: var(--text--color); */
     overflow: hidden;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 15px;
 }
 .product:hover{
     cursor: pointer;
 }
 .product img{
-    width: 100%;
+    margin-top: 10px;
+    width: 90%;
     height: 300px;
+    border-radius: 10px;
 }
-
+.product p:nth-child(2){
+    font-weight: 500;
+    font-size: 18px;
+}
+.product p:nth-child(3){
+    color: rgb(226, 12, 12);
+}
+.product p:nth-child(4){
+    font-size: 18px;
+}

@@ -59,8 +59,8 @@ window.addEventListener("scroll",function(){
                                     <h2 class="product-title">${products[i].title}</h2>
                                     <p>${products[i].description}</p>
                                     <p>brand:${products[i].brand}</p>
-                                    <p><b>$${products[i].price}</b></p>
                                     <p><del>$${parseInt((products[i].price * (products[i].discountPercentage / 100)) + products[i].price)}</del></p>
+                                    <p>$${products[i].price}</p>
                                     <p>rating: ${products[i].rating}</p>
                                     <button id="addtocart">Add To Cart</button>
                                 </div>
