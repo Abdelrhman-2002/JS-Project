@@ -48,7 +48,6 @@ header{
     align-items: center;
     gap: 3px;
     transform: translateX(30px);
-    color: var(--txt--color);
 }
 .logo:hover{
     cursor: pointer;
@@ -68,8 +67,11 @@ header{
 
 .logo p{
     font-size: 30px;
-    color: var(--txt--color);
     font-weight: 900;
+    transition: 1s;
+}
+.logo p:hover{
+    color: var(--dv--color);
 }
 nav ul{
     list-style: none;
@@ -88,10 +90,10 @@ nav img{
 nav a:hover{
     cursor: pointer;
     color: var(--dv--color);
-    transition: 1s;
 }
 nav ul li{
     margin: 15px;
+    transition: 1s;
 }
 nav ul li:hover{
     color: var(--dv--color);
@@ -116,7 +118,7 @@ section{
 footer{
     min-height: 800px;
     background-color: var(--dr--color);
-    color: var(--text--color);
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,7 +143,7 @@ footer{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: var(--text--color);
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,7 +201,7 @@ footer{
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: var(--nv--color);
+    background-color: white;
     border: none;
     position: fixed;
     bottom: 10px;

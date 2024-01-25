@@ -9,16 +9,18 @@
 :root,[theme='light']{
     --dv--color:#ff5722;
     --text--color:#e4f1fe;
+    --txt--color:black;
     --primary--color:#33332f;
     --dr--color:black;
     --nv--color:rgb(228, 241, 254,0.5);
 }
 :root,[theme='dark']{
     --dv--color:#ff5722;
-    --text--color:#e4f1fe;
+    --text--color:black;
+    --txt--color:white;
     --primary--color:#33332f;
     --dr--color:black;
-    --nv--color:rgb(228, 241, 254,0.5);
+    --nv--color:rgba(0, 0, 0, 0.5);
 }
 nav {
     height: 65px;
@@ -26,7 +28,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--text--color);
     position: sticky;
     top: 0;
     font-family: 'Permanent Marker', cursive, sans-serif;
@@ -34,7 +35,7 @@ nav {
     border-radius: 20px;
     z-index: 1000;
     transition: 1s;
-    behavior:"smooth"
+    background-color: var(--text--color);
 }
 header{
     display: flex;
@@ -47,6 +48,7 @@ header{
     gap: 3px;
     transform: translateX(30px);
 }
+
 .logo:hover{
     cursor: pointer;
 }
@@ -72,8 +74,12 @@ header{
 .logo p{
     transform: translateY(8px);
     font-size: 30px;
-    color: var(--dr--color);
+    color: var(--txt--color);
     font-weight: 900;
+    transition: 1s;
+}
+.logo p:hover{
+    color: var(--dv--color);
 }
 nav ul{
     transform: translateY(8px);
@@ -81,7 +87,7 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--dr--color);
+    color: var(--txt--color);
     font-weight: 900;
     font-size: 25px;
     font-family: 'Libre Baskerville', serif;
@@ -93,6 +99,7 @@ nav img{
 
 nav ul li{
     margin: 15px;
+    transition: 1s;
 }
 nav ul li:hover{
     color: var(--dv--color);
@@ -194,8 +201,12 @@ section{
     justify-content: center;
 }
 .text p{
-    color: var(--text--color);
+    color: var(--txt--color);
     font-size: 30px;
+    transition: 1s;
+}
+.text p:hover{
+    color: var(--dv--color);
 }
 .text{
     display: flex;
@@ -215,7 +226,7 @@ section{
 footer{
     min-height: 800px;
     background-color: var(--dr--color);
-    color: var(--text--color);
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -240,7 +251,7 @@ footer{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: var(--text--color);
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -266,6 +277,7 @@ footer{
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+    color: white;
 }
 .footer-info h1{
     font-size: 30px;
@@ -338,7 +350,7 @@ footer{
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: var(--nv--color);
+    background-color: white;
     border: none;
     position: fixed;
     bottom: 10px;
@@ -375,15 +387,12 @@ footer{
 }
 .product{
     width: 300px;
-    /* height: 450px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: var(--nv--color);
-    color: var(--dr--color);
-    /* background-color: var(--dr--color);
-    color: var(--text--color); */
+    color: var(--txt--color);
     overflow: hidden;
     box-shadow: 2px 2px 2px gray;
     border-radius: 15px;

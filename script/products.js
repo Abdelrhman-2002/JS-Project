@@ -1,3 +1,5 @@
+let currentUser=JSON.parse(window.localStorage.getItem("currentUser"));
+document.getElementById("username").innerHTML = currentUser.UserName;
 let nav=document.querySelector('nav'); 
 window.addEventListener("scroll",function(){
     if (window.scrollY > 50) {
@@ -31,7 +33,6 @@ window.addEventListener("scroll",function(){
     }
     });
 //................................................................................................................................
-
 let productsContainer = document.getElementsByClassName("products")[0];
 let xhr = new XMLHttpRequest();
 xhr.open("GET", "https://dummyjson.com/products");
@@ -66,7 +67,6 @@ xhr.addEventListener("readystatechange", function () {
     }
 });
 
-
 function categorize(category){
     if (xhr.readyState === 4) {
         let products = JSON.parse(xhr.response);
@@ -100,7 +100,7 @@ function categorize(category){
     }
 }
 function logout(){
-    window.location.href='../main.html';
+    window.location.href='../index.html';
     window.localStorage.setItem("currentUser",null)
 }
 

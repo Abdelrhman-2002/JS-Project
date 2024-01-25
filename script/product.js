@@ -1,3 +1,5 @@
+let currentUser=JSON.parse(window.localStorage.getItem("currentUser"));
+document.getElementById("username").innerHTML = currentUser.UserName;
 let nav=document.querySelector('nav'); 
 window.addEventListener("scroll",function(){
     if (window.scrollY > 50) {
@@ -16,7 +18,7 @@ window.addEventListener("scroll",function(){
 });
 let btn = document.getElementById("btn");
 window.addEventListener("scroll",function(){
-    if (window.scrollY > 900) {
+    if (window.scrollY > 200) {
         btn.classList.remove("hide");
         btn.classList.add("show");
         btn.addEventListener("click",function(){
